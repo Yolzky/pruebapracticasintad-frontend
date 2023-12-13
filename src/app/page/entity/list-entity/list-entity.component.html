@@ -1,0 +1,22 @@
+
+<span>testing this</span>
+
+<div *ngIf="pageResponse">
+  <mat-paginator
+    [length]="pageResponse.totalElements"
+    [pageSize]="pageResponse.size"
+    [pageSizeOptions]="[10, 25, 50, 100]"
+    (page)="onPageChange($event.pageIndex, $event.pageSize)"
+  ></mat-paginator>
+
+  <table>
+    <thead>
+    <!-- Encabezados de la tabla -->
+    </thead>
+    <tbody>
+    <tr *ngFor="let entity of entities">
+      <!-- Filas de la tabla con datos de la entidad -->
+    </tr>
+    </tbody>
+  </table>
+</div>

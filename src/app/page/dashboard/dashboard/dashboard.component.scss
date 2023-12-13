@@ -1,0 +1,31 @@
+/* mi-componente.component.css */
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Esto asegura que el componente ocupe el 100% de la altura de la ventana */
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 400px; /* Ajusta el ancho máximo del card según tus necesidades */
+  margin: 20px; /* Añade margen para separar los cards */
+  box-shadow: none; /* Elimina la sombra del card */
+}
+
+img {
+  width: 300%; /* La imagen ocupará el 100% del contenedor */
+  height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+mat-card-content {
+  margin-top: 10px; /* Añade espacio entre la imagen y el texto */
+}
+
+p {
+  font-size: 2em; /* Ajusta el tamaño del texto según tus necesidades */
+}

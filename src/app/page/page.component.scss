@@ -1,0 +1,20 @@
+mat-nav-list.list-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.spacer {
+  margin-left: auto;
+}
+
+/* En tu archivo de estilos (CSS o SCSS) */
+button.mat-button {
+  background-color: #333; /* Cambia el color de fondo según tus preferencias */
+  color: white; /* Cambia el color del texto para que sea legible en el fondo oscuro */
+  border: none; /* Elimina el borde para un aspecto más limpio */
+}
+
+/* Cambia el color de fondo al pasar el ratón sobre el botón */
+button.mat-button:hover {
+  background-color: #555; /* Cambia el color de fondo al pasar el ratón */
+}

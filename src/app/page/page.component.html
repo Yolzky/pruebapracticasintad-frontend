@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row #toolbarRow>
+    <!-- Utiliza la clase "spacer" para que los botones se alineen a la derecha -->
+    <span>Mantenimiento</span>
+    <span class="spacer"></span>
+    <!-- Botones a la derecha -->
+    <button mat-button (click)="tipoDocumento()">Tipo Documento</button>
+    <button mat-button (click)="entidad()">Entidad</button>
+    <button mat-button (click)="tipoContribuyente()">Tipo Contribuyente</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
