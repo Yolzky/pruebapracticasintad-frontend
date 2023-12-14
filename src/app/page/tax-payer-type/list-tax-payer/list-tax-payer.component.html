@@ -1,0 +1,32 @@
+<div *ngIf="pageResponse">
+  <h1>Tipos de Contribuyentes</h1>
+  <mat-paginator
+    [length]="pageResponse.totalElements"
+    [pageSize]="pageResponse.size"
+    [pageSizeOptions]="[5, 10, 12, 20]"
+    (page)="onPageChange($event.pageIndex, $event.pageSize)"
+  ></mat-paginator>
+
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Estado</th>
+      <th>Detalles</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let taxPayerType of taxPayerTypes; let i = index">
+      <td>{{ taxPayerType.id }}</td>
+      <td>{{ taxPayerType.name }}</td>
+      <td>{{ taxPayerType.status ? 'Activado' : 'Desactivado' }}</td>
+      <td>
+        <button mat-icon-button (click)="openDetailsModal(taxPayerType)">
+          <mat-icon>add</mat-icon>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

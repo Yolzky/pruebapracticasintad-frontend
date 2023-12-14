@@ -1,4 +1,3 @@
-// app/entity/list-entity.component.ts
 import {Component, OnInit} from '@angular/core';
 import {EntityService} from "../../../core/services/entity/entity.service";
 import {Entity, PageResponse, PaginationRequest} from "../../../core/models/dto/dto";
@@ -27,12 +26,10 @@ export class ListEntityComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Verificar si el usuario está autenticado antes de cargar entidades
     if (this.authService.getAuthToken()) {
       console.log('User is logged in')
       this.loadEntities();
     } else {
-      // Redirigir a la página de inicio de sesión si no está autenticado
       console.log('User is not logged in')
       this.loadEntities();
       //this.router.navigate(['/login']);
@@ -69,12 +66,10 @@ export class ListEntityComponent implements OnInit {
     this.loadEntities();
   }
 
-  // Método para abrir el modal de detalles
   openDetailsModal(entity: Entity) {
-    // Implementa la lógica para abrir el modal de detalles aquí
     console.log('Opening details modal for entity:', entity);
     const dialogRef = this.dialog.open(DetailsModalComponent, {
-      data: {entity, index: 0}, // Ajusta el índice según tu lógica
+      data: {entity, index: 0},
     });
   }
 

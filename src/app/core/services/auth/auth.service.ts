@@ -1,4 +1,3 @@
-// app/auth/auth.service.ts
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {environment} from 'src/environments/environment';
@@ -32,7 +31,6 @@ export class AuthService {
         catchError((error) => {
           console.error('Error en la solicitud de inicio de sesión', error);
 
-          // Obtener mensaje de error del cuerpo de la respuesta
           const errorMessage = (error && error.error && error.error.message) ? error.error.message : 'An error occurred';
 
           return throwError(errorMessage);

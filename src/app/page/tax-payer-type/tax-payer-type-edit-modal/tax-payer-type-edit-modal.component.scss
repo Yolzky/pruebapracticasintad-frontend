@@ -1,8 +1,11 @@
+/* tax-payer-type-edit-modal.component.scss */
+
+:host {
+  display: block;
+}
+
 .edit-document-type-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  padding: 16px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -23,11 +26,10 @@ mat-form-field {
 }
 
 mat-checkbox {
-  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .button-container {
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 
@@ -45,3 +47,5 @@ mat-checkbox {
     }
   }
 }
+
+/* Agrega otros estilos según sea necesario */

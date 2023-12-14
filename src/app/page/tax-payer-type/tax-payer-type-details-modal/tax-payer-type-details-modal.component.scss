@@ -1,8 +1,9 @@
-.edit-document-type-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+:host {
+  display: block;
+}
+
+.mat-dialog-content {
+  padding: 16px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -13,20 +14,15 @@ h2 {
   color: #007bff;
 }
 
-mat-form-field {
-  width: 100%;
-  margin-bottom: 16px;
-
-  input {
-    width: 100%;
-  }
-}
-
-mat-checkbox {
+div {
   margin-top: 16px;
 }
 
-.button-container {
+p {
+  margin: 8px 0;
+}
+
+.butttons {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;

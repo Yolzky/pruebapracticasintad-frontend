@@ -1,41 +1,39 @@
-/* Agrega estos estilos en tu archivo de estilos (por ejemplo, styles.scss) o en el componente específico */
-
 h1 {
-  font-size: 24px; /* Tamaño de fuente para el encabezado principal */
-  color: #007bff; /* Color azul para el encabezado principal */
-  margin-bottom: 16px; /* Espaciado inferior */
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 16px;
 }
 
 mat-paginator {
-  margin-top: 16px; /* Espaciado superior para el paginador */
+  margin-top: 16px;
 }
 
 table {
-  width: 100%; /* Asegura que la tabla ocupe el 100% del ancho disponible */
-  border-collapse: collapse; /* Colapsa los bordes de las celdas para un mejor aspecto */
-  margin-top: 16px; /* Espaciado superior para la tabla */
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
 }
 
 th, td {
-  padding: 12px; /* Relleno interno de las celdas */
-  text-align: left; /* Alineación de texto a la izquierda */
-  border: 1px solid #ddd; /* Borde de 1 píxel con color gris claro */
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
 }
 
 th {
-  background-color: #f2f2f2; /* Fondo gris claro para las celdas de encabezado */
+  background-color: #f2f2f2;
 }
 
 button {
-  background-color: #007bff; /* Fondo azul para los botones */
-  color: #fff; /* Texto blanco para los botones */
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  padding: 8px 16px; /* Relleno interno del botón */
-  border-radius: 4px; /* Bordes redondeados */
+  padding: 8px 16px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
+    background-color: #0056b3;
   }
 }

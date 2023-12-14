@@ -42,12 +42,10 @@ export class EditEntityComponent implements OnInit {
 
   onSave(): void {
     if (this.selectedDocumentType) {
-      // Asignar el ID del documento seleccionado
       this.entity.documentType = { id: this.selectedDocumentType.id } as DocumentType;
     }
 
     if (this.selectedTaxPayerType) {
-      // Asignar el ID del tipo de contribuyente seleccionado
       this.entity.taxPayerType = { id: this.selectedTaxPayerType.id } as TaxPayerType;
     }
 

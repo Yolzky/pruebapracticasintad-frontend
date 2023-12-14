@@ -1,0 +1,20 @@
+<div class="edit-document-type-container">
+
+  <h2>Editar Tipo de Documento</h2>
+
+  <p>ID: {{ taxPayerType.id }}</p>
+
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="taxPayerType.name" name="name" />
+  </mat-form-field>
+
+
+  <mat-checkbox [(ngModel)]="taxPayerType.status" name="status">Activo</mat-checkbox>
+
+  <div class="button-container">
+    <button mat-button (click)="onSave()">Guardar</button>
+    <button mat-button (click)="onClose()">Cerrar</button>
+  </div>
+
+</div>

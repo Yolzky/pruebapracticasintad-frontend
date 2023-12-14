@@ -10,7 +10,7 @@ import {DocumentTypeEditModalComponent} from "../document-type-edit-modal/docume
 
       <h2>Detalles de Tipo de Documento</h2>
 
-      <div class ='Entidad'>
+      <div class ='document-type'>
         <p>ID: {{ data.documentType.id }}</p>
         <p>Código: {{ data.documentType.code }}</p>
         <p>Nombre: {{ data.documentType.name || 'N/A' }}</p>

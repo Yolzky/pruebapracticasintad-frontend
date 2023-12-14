@@ -1,54 +1,50 @@
-/* document-type-details-modal.component.scss */
-
 :host {
   display: block;
-  width: 400px; /* Ancho del modal, ajusta según sea necesario */
+  width: 400px;
 }
 
 .mat-dialog-content {
   padding: 16px;
-  background-color: #fff; /* Fondo blanco para el contenido del modal */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sutil sombra */
-  border-radius: 8px; /* Bordes redondeados */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 h2 {
   margin-bottom: 16px;
-  color: #007bff; /* Color azul para el título */
+  color: #007bff;
 }
 
-.Entidad {
+.document-type {
   margin-top: 16px;
-  border-top: 1px solid #ddd; /* Línea divisoria superior */
+  border-top: 1px solid #ddd;
 
   p {
-    margin: 12px 0; /* Espaciado más grande entre los elementos <p> dentro de .Entidad */
+    margin: 12px 0;
   }
 
   span {
     font-weight: bold;
-    color: #007bff; /* Color azul para el texto en negrita */
+    color: #007bff;
   }
 }
 
 .butttons {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between; /* Espaciado uniforme entre los botones */
+  justify-content: space-between;
 
   button {
-    background-color: #007bff; /* Fondo azul para los botones */
-    color: #fff; /* Texto blanco para los botones */
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    padding: 10px 20px; /* Relleno interno de los botones */
-    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
+      background-color: #0056b3;
     }
   }
 }
-
-/* Agrega otros estilos según sea necesario */

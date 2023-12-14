@@ -16,10 +16,8 @@ export class EntityService {
   getEntities(paginationRequest: PaginationRequest): Observable<PageResponse> {
     const url = `${environment.baseUrl}${this.apiUrl}?page=${paginationRequest.page}&size=${paginationRequest.size}&sort=${paginationRequest.sort.join(',')}`;
 
-    // Obtén el token de autenticación almacenado
     const authToken = this.authService.getAuthToken();
 
-    // Configura las cabeceras con el token si está presente
     const headers = authToken
       ? new HttpHeaders({
         'Authorization': `Bearer ${authToken}`,
@@ -31,7 +29,6 @@ export class EntityService {
   }
 
   updateEntity(entity: Entity): Observable<Entity> {
-    // Puedes ajustar la URL según tu endpoint de actualización
     const updateUrl = `${environment.baseUrl}entity/${entity.id}`;
 
     const authToken = this.authService.getAuthToken();

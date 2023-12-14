@@ -1,4 +1,3 @@
-// app/document-type.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -17,10 +16,8 @@ export class DocumentTypeService {
   getDocumentTypes(paginationRequest: PaginationRequest){
     const url = `${environment.baseUrl}${this.apiUrl}?page=${paginationRequest.page}&size=${paginationRequest.size}&sort=${paginationRequest.sort.join(',')}`;
 
-    // Obtén el token de autenticación almacenado
     const authToken = this.authService.getAuthToken();
 
-    // Configura las cabeceras con el token si está presente
     const headers = authToken
       ? new HttpHeaders({
         'Authorization': `Bearer ${authToken}`,
@@ -34,10 +31,8 @@ export class DocumentTypeService {
   getAllDocumentTypes(): Observable<any> {
     const url = `${environment.baseUrl}${this.apiUrl}`;
 
-    // Obtén el token de autenticación almacenado
     const authToken = this.authService.getAuthToken();
 
-    // Configura las cabeceras con el token si está presente
     const headers = authToken
       ? new HttpHeaders({
         'Authorization': `Bearer ${authToken}`,

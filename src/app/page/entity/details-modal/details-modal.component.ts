@@ -60,13 +60,11 @@ export class DetailsModalComponent {
   }
 
   editEntity(entity: any): void {
-    // Abre el modal de edición
     const dialogRef = this.dialog.open(EditEntityComponent, {
       width: '400px',
       data: { entity }
     });
 
-    // Puedes suscribirte al evento afterClosed para realizar acciones después de cerrar el modal de edición
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Modal de edición cerrado', result);
     });

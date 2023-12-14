@@ -24,12 +24,10 @@ export class ListDocumentTypeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // Verificar si el usuario está autenticado antes de cargar entidades
     if (this.authService.getAuthToken()) {
       console.log('User is logged in')
       this.loadDocumentTypes();
     } else {
-      // Redirigir a la página de inicio de sesión si no está autenticado
       console.log('User is not logged in')
       this.loadDocumentTypes();
       //this.router.navigate(['/login']);
@@ -56,10 +54,9 @@ export class ListDocumentTypeComponent implements OnInit {
   }
 
   openDetailsModal(documentType: DocumentType) {
-    // Implementa la lógica para abrir el modal de detalles aquí
     console.log('Opening details modal for document Type:', documentType);
     const dialogRef = this.dialog.open(DocumentTypeDetailsModalComponent, {
-      data: {documentType, index: 0}, // Ajusta el índice según tu lógica
+      data: {documentType, index: 0},
     });
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Modal de edición cerrado', result);

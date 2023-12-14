@@ -1,5 +1,3 @@
-// login.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -54,7 +52,6 @@ export class LoginComponent implements OnInit {
         },
         complete: () => {
           console.log('API call completed.');
-          // Write your logic after API completion
           this._router.navigate(['/dashboard']);
         }
       });
