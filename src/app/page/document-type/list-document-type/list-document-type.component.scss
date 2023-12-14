@@ -1,0 +1,41 @@
+/* Agrega estos estilos en tu archivo de estilos (por ejemplo, styles.scss) o en el componente específico */
+
+h1 {
+  font-size: 24px; /* Tamaño de fuente para el encabezado principal */
+  color: #007bff; /* Color azul para el encabezado principal */
+  margin-bottom: 16px; /* Espaciado inferior */
+}
+
+mat-paginator {
+  margin-top: 16px; /* Espaciado superior para el paginador */
+}
+
+table {
+  width: 100%; /* Asegura que la tabla ocupe el 100% del ancho disponible */
+  border-collapse: collapse; /* Colapsa los bordes de las celdas para un mejor aspecto */
+  margin-top: 16px; /* Espaciado superior para la tabla */
+}
+
+th, td {
+  padding: 12px; /* Relleno interno de las celdas */
+  text-align: left; /* Alineación de texto a la izquierda */
+  border: 1px solid #ddd; /* Borde de 1 píxel con color gris claro */
+}
+
+th {
+  background-color: #f2f2f2; /* Fondo gris claro para las celdas de encabezado */
+}
+
+button {
+  background-color: #007bff; /* Fondo azul para los botones */
+  color: #fff; /* Texto blanco para los botones */
+  border: none;
+  padding: 8px 16px; /* Relleno interno del botón */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+
+  &:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
+  }
+}

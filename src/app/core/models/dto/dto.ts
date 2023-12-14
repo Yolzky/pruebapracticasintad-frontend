@@ -28,7 +28,7 @@ export interface PageResponse {
   totalElements: number;
   totalPages: number;
   size: number;
-  content: Entity[];
+  content: [];
   number: number;
 }
 

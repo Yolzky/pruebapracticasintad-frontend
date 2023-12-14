@@ -1,0 +1,48 @@
+
+:host {
+  display: block;
+  width: 600px;
+}
+
+.mat-dialog-content {
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h2 {
+  margin-bottom: 16px;
+  color: #007bff;
+}
+
+.tipo-contribuyente,
+.documento {
+  margin-top: 16px;
+  border-top: 1px solid #ddd;
+
+  p {
+    margin: 12px 0;
+  }
+
+  span {
+    font-weight: bold;
+    color: #007bff;
+  }
+}
+
+button {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+

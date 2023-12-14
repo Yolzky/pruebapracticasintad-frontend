@@ -7,7 +7,9 @@ const routes: Routes = [
   {
     path: '', component: PageComponent, children: [
       {path: 'dashboard', loadChildren: () => import('./page/dashboard/dashboard.module').then(m => m.DashboardModule)},
-      {path: 'entity', loadChildren: () => import('./page/entity/entity.module').then(m => m.EntityModule)}
+      {path: 'entity', loadChildren: () => import('./page/entity/entity.module').then(m => m.EntityModule)},
+      {path: 'document-type', loadChildren: () => import('./page/document-type/document-type.module').then(m => m.DocumentTypeModule)},
+      {path: 'tax-payer-type', loadChildren: () => import('./page/tax-payer-type/tax-payer-type.module').then(m => m.TaxPayerTypeModule)},
     ]
   }
 ];

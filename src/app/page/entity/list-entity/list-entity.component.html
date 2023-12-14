@@ -1,22 +1,50 @@
-
-<span>testing this</span>
-
+<script src="../../../core/models/dto/dto.ts"></script>
 <div *ngIf="pageResponse">
+  <h1>Entidad</h1>
   <mat-paginator
     [length]="pageResponse.totalElements"
     [pageSize]="pageResponse.size"
-    [pageSizeOptions]="[10, 25, 50, 100]"
+    [pageSizeOptions]="[5, 10, 12, 20]"
     (page)="onPageChange($event.pageIndex, $event.pageSize)"
   ></mat-paginator>
 
   <table>
     <thead>
-    <!-- Encabezados de la tabla -->
+    <tr>
+      <th>ID</th>
+      <th>Tipo de Documento</th>
+      <th>Número de Documento</th>
+      <th>Razón Social</th>
+      <th>Nombre Comercial</th>
+      <th>Dirección</th>
+      <th>Teléfono</th>
+      <th>Tipo de Contribuyente</th>
+      <th>Estado</th>
+      <th>Detalles</th>
+    </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let entity of entities">
-      <!-- Filas de la tabla con datos de la entidad -->
+    <tr *ngFor="let entity of entities; let i = index">
+      <td>{{ entity.id }}</td>
+      <td>{{ entity.documentType?.name || 'N/A' }}</td>
+      <td>{{ entity.documentNumber }}</td>
+      <td>{{ entity.businessName || 'N/A' }}</td>
+      <td>{{ entity.commercialName || 'N/A' }}</td>
+      <td>{{ entity.address || 'N/A' }}</td>
+      <td>{{ entity.phone || 'N/A' }}</td>
+      <td>{{ entity.taxPayerType?.name || 'N/A' }}</td>
+      <td>{{ entity.status ? 'Activado' : 'Desactivado' }}</td>
+      <td>
+        <button mat-icon-button (click)="openDetailsModal(entity)">
+          <mat-icon>add</mat-icon>
+        </button>
+      </td>
     </tr>
     </tbody>
   </table>
+
+  <!-- Modal fuera del bucle *ngFor -->
+  <ng-container *ngFor="let entity of entities; let i = index">
+    <app-details-modal [data]="entity" [index]="i"></app-details-modal>
+  </ng-container>
 </div>

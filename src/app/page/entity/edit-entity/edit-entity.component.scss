@@ -1,0 +1,36 @@
+/* edit-entity.component.scss */
+.edit-entity-container {
+  width: 350px;
+  max-width: 100%;
+  padding: 16px;
+
+  h2 {
+    margin-bottom: 16px;
+    color: #007bff;
+  }
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}

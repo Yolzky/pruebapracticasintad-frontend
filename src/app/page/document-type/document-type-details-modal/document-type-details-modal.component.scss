@@ -1,0 +1,54 @@
+/* document-type-details-modal.component.scss */
+
+:host {
+  display: block;
+  width: 400px; /* Ancho del modal, ajusta según sea necesario */
+}
+
+.mat-dialog-content {
+  padding: 16px;
+  background-color: #fff; /* Fondo blanco para el contenido del modal */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+h2 {
+  margin-bottom: 16px;
+  color: #007bff; /* Color azul para el título */
+}
+
+.Entidad {
+  margin-top: 16px;
+  border-top: 1px solid #ddd; /* Línea divisoria superior */
+
+  p {
+    margin: 12px 0; /* Espaciado más grande entre los elementos <p> dentro de .Entidad */
+  }
+
+  span {
+    font-weight: bold;
+    color: #007bff; /* Color azul para el texto en negrita */
+  }
+}
+
+.butttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; /* Espaciado uniforme entre los botones */
+
+  button {
+    background-color: #007bff; /* Fondo azul para los botones */
+    color: #fff; /* Texto blanco para los botones */
+    border: none;
+    padding: 10px 20px; /* Relleno interno de los botones */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+
+    &:hover {
+      background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
+    }
+  }
+}
+
+/* Agrega otros estilos según sea necesario */

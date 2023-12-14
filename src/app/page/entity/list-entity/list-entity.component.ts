@@ -1,9 +1,12 @@
 // app/entity/list-entity.component.ts
-import { Component, OnInit } from '@angular/core';
-import { EntityService } from "../../../core/services/entity/entity.service";
-import { Entity, PageResponse, PaginationRequest } from "../../../core/models/dto/dto";
-import { AuthService } from "../../../core/services/auth/auth.service";
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {EntityService} from "../../../core/services/entity/entity.service";
+import {Entity, PageResponse, PaginationRequest} from "../../../core/models/dto/dto";
+import {AuthService} from "../../../core/services/auth/auth.service";
+import {Router} from '@angular/router';
+import {DetailsModalComponent} from "../details-modal/details-modal.component";
+import {MatDialog} from "@angular/material/dialog";
+import {EditEntityComponent} from "../edit-entity/edit-entity.component";
 
 @Component({
   selector: 'app-list-entity',
@@ -13,25 +16,31 @@ import { Router } from '@angular/router';
 export class ListEntityComponent implements OnInit {
   entities: Entity[] = [];
   pageResponse: PageResponse | undefined;
-  paginationRequest: PaginationRequest = { page: 0, size: 10, sort: ['asc'] };
+  paginationRequest: PaginationRequest = {page: 0, size: 10, sort: ['asc']};
 
   constructor(
     private entityService: EntityService,
     private authService: AuthService,
-    private router: Router
-  ) {}
+    private router: Router,
+    private dialog: MatDialog
+  ) {
+  }
 
   ngOnInit(): void {
     // Verificar si el usuario está autenticado antes de cargar entidades
     if (this.authService.getAuthToken()) {
+      console.log('User is logged in')
       this.loadEntities();
     } else {
       // Redirigir a la página de inicio de sesión si no está autenticado
-      this.router.navigate(['/login']);
+      console.log('User is not logged in')
+      this.loadEntities();
+      //this.router.navigate(['/login']);
     }
   }
 
   loadEntities() {
+    console.log('Loading entities')
     this.entityService.getEntities(this.paginationRequest).subscribe(
       (response) => {
         console.log('Response:', response);
@@ -59,4 +68,25 @@ export class ListEntityComponent implements OnInit {
     this.paginationRequest.sort = sort;
     this.loadEntities();
   }
+
+  // Método para abrir el modal de detalles
+  openDetailsModal(entity: Entity) {
+    // Implementa la lógica para abrir el modal de detalles aquí
+    console.log('Opening details modal for entity:', entity);
+    const dialogRef = this.dialog.open(DetailsModalComponent, {
+      data: {entity, index: 0}, // Ajusta el índice según tu lógica
+    });
+  }
+
+  openEditModal(entity: any): void {
+    const dialogRef = this.dialog.open(EditEntityComponent, {
+      width: '1000px',
+      data: {entity},
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.loadEntities();
+    });
+  }
+
 }

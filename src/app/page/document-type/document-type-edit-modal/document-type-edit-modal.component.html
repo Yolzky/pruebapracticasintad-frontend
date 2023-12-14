@@ -1,0 +1,30 @@
+<!-- edit-entity.component.html -->
+<div class="edit-document-type-container">
+
+  <h2>Editar Tipo de Documento</h2>
+
+  <p>ID: {{ documentType.id }}</p>
+
+  <mat-form-field>
+    <mat-label>Código</mat-label>
+    <input matInput [(ngModel)]="documentType.code" name="code" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="documentType.name" name="name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Descripción</mat-label>
+    <input matInput [(ngModel)]="documentType.description" name="description" />
+  </mat-form-field>
+
+  <mat-checkbox [(ngModel)]="documentType.status" name="status">Activo</mat-checkbox>
+
+  <div class="button-container">
+    <button mat-button (click)="onSave()">Guardar</button>
+    <button mat-button (click)="onClose()">Cerrar</button>
+  </div>
+
+</div>
